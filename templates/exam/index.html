@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <title>Hexcent Portal</title>
+<style>
+  .jumbotron{
+    margin-bottom: 0px;
+  }
+  .btn-primary{
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: -13px; 
+    width: 160px;
+    background-color: #B62e5a;
+  
+    border-radius: 15px;
+    box-shadow: 0 9px #e39abb;
+  }
+  .img-fluid{
+    padding-right: 80px;
+   }
+   .flex-column{
+     margin-top: 100px;
+     font-family: 'Times New Roman', Times, serif;
+     color: #B62e5a;
+   }
+  .btn{
+    padding: 30px;
+    border: none;
+  }
+    .btn:hover {
+      background-color: #B62e5a;
+      border: none;
+      }
+  
+    .btn:active {
+      background-color: #B62e5a;
+      box-shadow: 0 5px #666;
+      border: none;
+      transform: translateY(4px);
+    }
+</style>
+<body>
+  {% include "exam/navbar.html" %}
+<br>
+
+<div class="container-fluid" style="margin-left: -10px;margin-right: 0;">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{% static 'image/landing.jpg' %}" class="img-fluid" style="max-width: 100%;margin-left: 30px;" alt="Image">
+    </div>
+
+    <div class="col-md-6">
+      <div class="d-flex flex-column" style="margin-left: 70px;">
+        <h1>Hexcent Exam Portal</h1>
+        <p>-----A Portal for Performance</p>
+        <div class="content" style="color: black;font-size: larger;margin-right: 100px;margin-top: 20px;margin-left: 10px;">
+          <p>"Hexcent Pvt Ltd proudly presents its Online Exam Portal, designed to assess your software training progress comprehensively. Our core purpose is to evaluate your learning and identify your challenges. Join us on this journey of improvement and success."</p>
+        </div><div>
+            
+        <a href="/student/studentclick" class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;">As Student</a>
+        <a href="/teacher/teacherclick"><button class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;">As Teacher</button></a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+  {% include "exam/footer.html" %}
+
+
+</body>
+
+</html>

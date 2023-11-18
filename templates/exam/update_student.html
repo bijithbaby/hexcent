@@ -1,0 +1,103 @@
+{% extends 'exam/adminbase2.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+  <title>Hexcent Portal</title>
+  <style media="screen">
+    input[type=text], select,input[type=number] ,input[type=password], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+    a{
+    font-size:15px;
+  }
+  .sidebar h4 {
+    
+    margin-top: 0;
+    font-size:25px;
+    
+  }
+  h6{
+    font-size:15px; 
+  }
+  label .fas fa-bars{
+            margin-top:10px;
+  }
+
+  .logo{
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+
+  .btn{
+   
+    padding: 30px;
+    border: none;
+    float: right;
+      }
+    .btn-primary {
+     
+    margin-top: -20px;
+      margin-right: 40px;
+      width: 180px;
+      background-color: #B62e5a;
+      border-radius: 5px;
+      box-shadow: 0 9px #e39abb;
+      text-decoration: none;
+      text-align:center;
+      color:white;
+      }
+  </style>
+
+
+</head>
+
+<br><br>
+<h2 style="text-align:center;color:#B62e5a">Update Student</h2>
+<div>
+  <form method="post" autocomplete="off" enctype="multipart/form-data" style="margin-left:200px;margin-right:200px;">
+      {% csrf_token %}
+        <label for="first_name">First Name</label>
+        {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+        <label for="last_name">Last Name</label>
+        {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+          <label for="mobile">Contact</label>
+          {% render_field studentForm.mobile class="form-control" placeholder="Mobile" %}
+            <label for="address">Address</label>
+          {% render_field studentForm.address class="form-control" placeholder="Address" %}
+          
+        <label for="username">Username</label>
+        {% render_field userForm.username class="form-control" placeholder="Username" %}
+          <label for="password">Password</label>
+        {% render_field userForm.password class="form-control" placeholder="Password" %} <br><br>
+        <label for="profile_pic">Profile Picture</label>
+          {% render_field studentForm.profile_pic class="form-control" placeholder="Profile Picture" %}
+<br><br>
+    <input type="submit" value="Update" style="border-radius:0px;">
+  </form>
+</div>
+
+
+
+<br><br><br><br><br><br><br><br>
+{% endblock content %}

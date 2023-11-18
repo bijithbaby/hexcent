@@ -1,0 +1,64 @@
+{% extends 'teacher/teacherbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+  <title>Hexcent Portal </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+  <style>
+  a:link {
+        text-decoration: none;
+      }
+      a{
+        font-size:15px;
+      }
+      .sidebar h4 {
+        
+        margin-top: 0;
+        font-size:25px;
+        
+      }
+      h6{
+        font-size:15px; 
+      }
+      label .fas fa-bars{
+                margin-top:10px;
+      }
+  
+     .btn-primary{
+      margin-top:-5px;
+      text-decoration:none;
+      color:#fff;
+    }
+    .logo{
+
+       margin-top:-30px;
+    }
+  </style>
+</head>
+
+
+
+<h2 style="text-align:center;color:
+ #B62a5e; ">Add Course Info</h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+      <label for="course_name">Course Name</label>
+      {% render_field courseForm.course_name class="form-control" placeholder="Example: Databases" %}
+
+      <label for="question_number">Total Question</label>
+      {% render_field courseForm.question_number class="form-control" placeholder="Example: 10" %}
+
+      <label for="total_marks">Total Marks</label>
+      {% render_field courseForm.total_marks class="form-control" placeholder="Example: 100" %}
+    </div>
+    
+    
+    <button type="submit" class="btn btn-success" style="background-color: #B62a5e;padding: 10px;border: none;">Submit Info</button>
+  </form>
+<br><br><br>
+{% endblock content %}

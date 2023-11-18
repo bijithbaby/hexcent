@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="utf-8">
+    <style>
+
+        form{
+           margin: 50px; 
+          
+        }
+        .btn-primary{
+          margin-top: 40px;
+          margin-right: 20px;
+          margin-left: 30px; 
+          width: 180px;
+          background-color: #B62e5a;
+        
+          border-radius: 15px;
+          box-shadow: 0 9px #e39abb;
+        }
+        .btn{
+          
+          padding: 30px;
+          border: none;
+        }
+          .btn:hover {
+            background-color: #B62e5a;
+            border: none;
+            }
+        
+          .btn:active {
+            background-color: #B62e5a;
+            box-shadow: 0 5px #666;
+            border: none;
+            transform: translateY(4px);
+          }
+
+
+    </style>
+  </head>
+  <body>
+    {% include "exam/navbar.html" %}
+ 
+
+
+<br><br><br>
+<div class="container">
+	<div class="d-flex align-items-center mb-3 pb-1">
+    <i class="fa-solid fa-circle-user fa-3x mx-auto" style="color: #b62a5e;"></i>
+  </div>
+  <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; text-align: center;">Enroll and Elevate</h3>
+  
+<form method="POST" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="first_name">First Name</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="last_name">Last Name</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="mobile">Contact</label>
+          {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="Contact Number" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="address">Address</label>
+          {% render_field studentForm.address|attr:'required:true'  class="form-control" placeholder="Address" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="username">Username</label>
+          {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="username" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Password</label>
+          {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="profile_pic">Profile Picture</label>
+          {% render_field studentForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
+        </div>
+        
+      </div>
+      <div class="text-center">     
+        <button type="submit" class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;">Sign Up</button>
+    </div>
+  </form>
+</div>
+
+
+<br><br>
+{% include "exam/footer.html" %}
+  </body>
+</html>

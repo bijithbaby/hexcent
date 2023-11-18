@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hexcent Portal</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white pd-10">
+    <a class="navbar-brand" href="#" style="margin-left: 20px;">
+        <img src="{% static 'image/logo.png' %}" width="90" height="50" alt="">
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" style="margin-left: auto;">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://127.0.0.1:8000/" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/teacher/teacherclick" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Teacher</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/student/studentclick" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Student</a>
+        </li>
+        {% comment %} <li class="nav-item">
+            <a class="nav-link" href="/adminclick"  style="font-size: larger; margin-right: 20px;color: #B62a5e;">Admin</a>
+        </li> {% endcomment %}
+      </ul>
+    </div>
+  </nav>
+
+<!-- 
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+
+    }
+    .bg-dark {
+    background-color: #212529!important;
+}
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background-color: #212529;">
+    <a style="color: #ffffff;text-decoration: none; " href="/"><font face = "verdana" size =" 5">Online Examination</font><br /></a>  
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+    
+        </div>
+
+        <div class="navbar-nav">
+          <a style="padding-left: 30px;" href="/" class="nav-item nav-link"> Home</a>
+          <a href="/teacher/teacherclick" class="nav-item nav-link">Teacher</a>
+          <a href="/student/studentclick" class="nav-item nav-link">Student</a>
+          <a href="/adminclick" class="nav-item nav-link">Admin</a>
+          <a href="/contactus" class="nav-item nav-link">Contact</a>
+          
+        </div>
+
+
+
+
+      </div>
+    </nav>
+  </div> -->
+
+
+</body>
+
+</html>

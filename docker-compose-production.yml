@@ -1,0 +1,33 @@
+version: '3.3'
+services:
+  hexcent:
+    container_name: hexcent
+    restart: always
+    build: .
+    volumes:
+      - .:/hexcent
+    networks:
+      - db_network
+      - web_network
+  nginx:
+    container_name: hexcent_nginx
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./static:/home/hexcent/staticfiles
+    networks:
+      - web_network
+    depends_on: 
+      - hexcent
+ 
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge
+ 
+volumes:
+  static:

@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  hexcent:
+    container_name: hexcent
+    image: hexcent:1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/hexcent
+    ports:
+      - '${APP_PORT}:8000'
+      - '${DEBUG_PORT}:3000'
+
+  
+  
+  

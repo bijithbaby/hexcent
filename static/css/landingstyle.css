@@ -1,0 +1,43 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+.img-fluid{
+ padding-right: 80px;
+}
+.flex-column{
+  margin-top: 100px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #B62e5a;
+}
+.btn-primary{
+  margin-top: 40px;
+  margin-right: 20px;
+  margin-left: 30px; 
+  width: 180px;
+  background-color: #B62e5a;
+
+  border-radius: 15px;
+  box-shadow: 0 9px #e39abb;
+}
+
+.btn{
+  padding: 30px;
+  border: none;
+}
+  .btn:hover {
+    background-color: #B62e5a;
+    border: none;
+    }
+
+  .btn:active {
+    background-color: #B62e5a;
+    box-shadow: 0 5px #666;
+    border: none;
+    transform: translateY(4px);
+  }
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+
+<title>Hexcent Portal </title>
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+    .btn-primary{
+      margin-top: 40px;
+      margin-right: 20px;
+      margin-left: 30px; 
+      width: 180px;
+      background-color: #B62e5a;
+    
+      border-radius: 15px;
+      box-shadow: 0 9px #e39abb;
+    }
+    .btn{
+      
+      padding: 30px;
+      border: none;
+    }
+      .btn:hover {
+        background-color: #B62e5a;
+        border: none;
+        }
+    
+      .btn:active {
+        background-color: #B62e5a;
+        box-shadow: 0 5px #666;
+        border: none;
+        transform: translateY(4px);
+      }
+  </style>
+  <body>
+    {% include "exam/navbar.html" %}
+
+      <div class="jumbotron" style="margin-top: 0px;
+        margin-bottom: 0px;">
+        <h1 class="display-3">Hello {{request.user.first_name}},</h1>
+        <p class="lead">Your Account has not been <b>ACTIVATED</b> yet! <br><br>Waiting for approval from the administrator <br><br>and Soon you'll be able to access your Account after approval</p>
+        <hr class="my-4">
+       
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="/logout" style="border-radius: 0%;" role="button">Logout Now</a>
+        </p>
+      </div>
+
+{% include "exam/footer.html" %}
+  </body>
+</html>
