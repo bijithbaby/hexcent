@@ -10,10 +10,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+  @media(min-width:768px){
 
+ .navbar-collapse {
+  width:100%;
+}
+}
+@media(min-width:512px){
+
+  .navbar-collapse {
+   width:100%;
+ }
+ }
+</style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white pd-10">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white ">
     <a class="navbar-brand" href="#" style="margin-left: 20px;">
         <img src="{% static 'image/logo.png' %}" width="90" height="50" alt="">
       </a>
@@ -23,20 +37,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav" style="margin-left: auto;">
         <li class="nav-item active">
-          <a class="nav-link" href="http://127.0.0.1:8000/" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'home' %}" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/teacher/teacherclick" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Teacher</a>
+          <a class="nav-link" href="{% url 'teacherclick' %}" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Teacher</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/student/studentclick" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Student</a>
+          <a class="nav-link" href="{% url 'studentclick' %}" style="font-size: larger; margin-right: 20px;color: #B62a5e;">Student</a>
         </li>
-        {% comment %} <li class="nav-item">
-            <a class="nav-link" href="/adminclick"  style="font-size: larger; margin-right: 20px;color: #B62a5e;">Admin</a>
-        </li> {% endcomment %}
+      
       </ul>
     </div>
   </nav>
+
 
 <!-- 
 <!DOCTYPE html>

@@ -8,8 +8,8 @@
   }
   .btn-primary{
     margin-bottom: 10px;
-    margin-right: 20px;
-    margin-left: -13px; 
+    margin-right: -5px;
+    margin-left: 50px;
     width: 160px;
     background-color: #B62e5a;
   
@@ -44,23 +44,24 @@
   {% include "exam/navbar.html" %}
 <br>
 
-<div class="container-fluid" style="margin-left: -10px;margin-right: 0;">
+<div class="container-fluid" style="margin-left: -10px;margin-right: 0;margin-bottom:5px;">
   <div class="row">
     <div class="col-md-6">
-      <img src="{% static 'image/landing.jpg' %}" class="img-fluid" style="max-width: 100%;margin-left: 30px;" alt="Image">
+      <img src="{% static 'image/landing.jpg' %}" class="img-fluid" style="max-width: 100%;margin-left: 30px;height:450px;" alt="Image">
     </div>
 
     <div class="col-md-6">
-      <div class="d-flex flex-column" style="margin-left: 70px;">
+      <div class="d-flex flex-column" style="margin-left: 10px;">
         <h1>Hexcent Exam Portal</h1>
         <p>-----A Portal for Performance</p>
         <div class="content" style="color: black;font-size: larger;margin-right: 100px;margin-top: 20px;margin-left: 10px;">
           <p>"Hexcent Pvt Ltd proudly presents its Online Exam Portal, designed to assess your software training progress comprehensively. Our core purpose is to evaluate your learning and identify your challenges. Join us on this journey of improvement and success."</p>
-        </div><div>
+        </div>
+        {% comment %} <div>
             
         <a href="/student/studentclick" class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;">As Student</a>
         <a href="/teacher/teacherclick"><button class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;">As Teacher</button></a>
-        </div>
+        </div> {% endcomment %}
       </div>
     </div>
     

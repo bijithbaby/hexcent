@@ -18,14 +18,14 @@
 .box {
     width: 500px;
     padding: 40px;
-    position: absolute;
+    {% comment %} position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%; {% endcomment %}
     background: #fff;
     border-radius: 15px;
     text-align: center;
     transition: 0.25s;
-    margin-top: 100px
+    margin-top: 85px;
 }
 
 .box input[type="text"],
@@ -108,8 +108,9 @@
     {% include "exam/navbar.html" %}
     <div class="container">
     <div class="row">
+      <div class="col-md-3"></div>
         <div class="col-md-6">
-            <div class="card">
+           
                 <form class="box" method="post">
                     {% csrf_token %}
                     <h1 style="color:#B62e5a">Elevate Your Skills:<br>Login Here..</h1>
@@ -121,13 +122,12 @@
 
 
                 </form>
-            </div>
+         
         </div>
+        <div class="col-md-3"></div>
     </div>
 </div>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br>
+<br><br><br>
 {% include "exam/footer.html" %}
   </body>
 </html>

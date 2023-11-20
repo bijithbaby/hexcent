@@ -18,7 +18,7 @@
         }
       .btn-primary{
        
-      margin-top: -65px;
+      margin-top: -85px;
         margin-right: 40px;
         width: 180px;
         background-color: #B62e5a;
@@ -29,7 +29,14 @@
        
         }
     
-
+@media(max-width:300px){
+  {
+    .btn-primary{
+      width:100px;
+      margin-right:85px;
+    }
+  }
+}
     a:link {
       text-decoration: none;
     }
@@ -170,12 +177,12 @@
       <i style="left: 200px;color:#B62e5a;margin-top: 7px;"class="fas fa-bars" id="sidebar_btn"></i>
     </label>
     <div class="left_area">
-      <a href="http://127.0.0.1:8000/" class="navbar-brand mx-4 mb-3">
+      <a href="{% url 'home' %}" class="navbar-brand mx-4 mb-3">
         <img src="{% static 'image/logo.png' %}" class="logo">
      </a>
     </div>
     <div class="right_area">
-      <a href="http://127.0.0.1:8000/logout" > <button class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;color:white;">Sign Out</button></a>
+      <a href="{% url 'logout' %}" > <button class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;color:white;">Sign Out</button></a>
 
     </div>
   </header>

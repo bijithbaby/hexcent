@@ -167,12 +167,12 @@
       <i style="left: 200px;color:#B62e5a;margin-top:25px;"class="fas fa-bars" id="sidebar_btn"></i>
     </label>
     <div class="left_area">
-      <a href="http://127.0.0.1:8000/" class="navbar-brand mx-4 mb-3">
+      <a href="{% url 'home' %}" class="navbar-brand mx-4 mb-3">
         <img src="{% static 'image/logo.png' %}" style="width: 90px; height: 50px;margin-top:-5px;">
      </a>
     </div>
     <div class="right_area">
-      <a href="/logout" class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;margin-top:-55px;">Sign Out</a>
+      <a href="{% url 'logout' %}" class="btn btn-primary" style="background-color: #B62a5e;padding: 10px;border: none;margin-top:-55px;">Sign Out</a>
     </div>
   </header>
   <!--header area end-->
